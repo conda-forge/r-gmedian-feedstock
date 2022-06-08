@@ -1,4 +1,4 @@
-{% set version = '1.2.6' %}
+{% set version = "1.2.7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/Gmedian_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/Gmedian/Gmedian_{{ version }}.tar.gz
-  sha256: ad48721ca190dc4bdf3af693c298843c605764b054ca03365d05d394930366cd
+  sha256: 5378666a91de7a7bed078626869362ed5f0d0587dd5e78b1ec3d54e249b92e55
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -53,9 +53,7 @@ test:
 about:
   home: https://CRAN.R-project.org/package=Gmedian
   license: GPL-2.0-or-later
-  summary: Fast algorithms for robust estimation with large samples of multivariate observations.
-    Estimation of the geometric median, robust k-Gmedian clustering, and robust PCA
-    based on the Gmedian covariation matrix.
+  summary: Fast algorithms for robust estimation with large samples of multivariate observations. Estimation of the geometric median, robust k-Gmedian clustering, and robust PCA based on the Gmedian covariation matrix.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
